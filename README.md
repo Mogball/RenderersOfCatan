@@ -1,6 +1,11 @@
 # Renderers of Catan
 Renderers of Catan is a [Catan](http://www.catan.com/) board generation tool. It can be used to generate a board image with various contraints and dimensions. The image can then be printed and played on!
 
+## Compiling
+To compile run ```make all``` which should generate the "catangen" executable. 
+
+The **libpng**, **GLEW** and **GLFW** packages are required for compilation. They can be installed with Brew, e.g. ```brew install glew```.
+
 ## Configuration File
 Different kinds of boards can be generated with config files. The format for the config file is given below. There are some sample config files in [configs](configs/)
 

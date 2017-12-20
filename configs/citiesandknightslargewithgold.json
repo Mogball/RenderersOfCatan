@@ -1,14 +1,14 @@
 {
-	"board" : [3, 4, 5, 4, 3],
-	"chits" : [0, 1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1],
+	"board" : [3, 4, 5, 6, 5, 4, 3],
+	"chits" : [0, 1, 3, 3, 4, 3, 0, 3, 4, 3, 3, 3],
 	"water_count" : 0,
-	"desert_count" : 1,
-	"gold_count" : 0,
-	"forest_count" : 4,
-	"mine_count" : 3,
-	"mountain_count" : 3,
-	"wheat_count" : 4,
-	"fields_count" : 4,
+	"desert_count" : 0,
+	"gold_count" : 2,
+	"forest_count" : 6,
+	"mine_count" : 5,
+	"mountain_count" : 5,
+	"wheat_count" : 6,
+	"fields_count" : 6,
 	"rules" : [
 		{
 			"name" : "NoSpecialChitsTouching",
@@ -17,7 +17,7 @@
 	],
 	"ports" : [
 		{
-			"count" : 4,
+			"count" : 3,
 			"resource" : "?"
 		},
 		{

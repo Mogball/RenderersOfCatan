@@ -9,6 +9,7 @@ INCLUDE_PATHS = -I/usr/local/include -I/opt/X11/include
 
 # LIBRARY_PATHS specifies the additional library paths we'll need
 LIBRARY_PATHS = -L/usr/local/lib -I/opt/X11/lib
+#LIBRARY_PATHS = -L/opt/local/lib -I/opt/X11/lib
 
 # COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings
