@@ -1,0 +1,42 @@
+{
+	"board" : [4, 7, 10, 9, 12, 13, 12, 13, 12, 11, 8, 9, 10, 7, 4],
+	"chits" : [0, 11, 15, 16, 17, 12, 0, 12, 18, 15, 15, 11],
+	"water_count" : 20,
+	"desert_count" : 6,
+	"gold_count" : 5,
+	"forest_count" : 22,
+	"mine_count" : 22,
+	"mountain_count" : 22,
+	"wheat_count" : 22,
+	"fields_count" : 22,
+	"rules" : [
+		{ "name" : "NoSpecialChitsTouching", "follow_strictly" : true },
+    { "name" : "NoSuperGold", "follow_strictly": true }
+	],
+	"ports" : [
+		{
+			"count" : 4,
+			"resource" : "?"
+		},
+		{
+			"count" : 2,
+			"resource" : "brick"
+		},
+		{
+			"count" : 2,
+			"resource" : "wheat"
+		},
+		{
+			"count" : 2,
+			"resource" : "sheep"
+		},
+		{
+			"count" : 2,
+			"resource" : "ore"
+		},
+		{
+			"count" : 2,
+			"resource" : "wood"
+		}
+	]
+}
