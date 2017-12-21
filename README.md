@@ -1,10 +1,16 @@
 # Renderers of Catan
-Renderers of Catan is a [Catan](http://www.catan.com/) board generation tool. It can be used to generate a board image with various contraints and dimensions. The image can then be printed and played on!
+Renderers of Catan is a [Catan](http://www.catan.com/) board generation tool. It can be used to generate a board image with various constraints and dimensions. The image can then be printed and played on!
 
 ## Compiling
-To compile run ```make all``` which should generate the "catangen" executable. 
+To compile run ```make all``` which should generate the "catangen" executable.
 
-The **libpng**, **GLEW** and **GLFW** packages are required for compilation. They can be installed with Brew, e.g. ```brew install glew```.
+The **libpng**, **GLEW** and **GLFW** packages are required for compilation. They can be installed with Brew:
+
+```bash
+brew install glew
+brew install glfw
+brew install libpng
+```
 
 ## Configuration File
 Different kinds of boards can be generated with config files. The format for the config file is given below. There are some sample config files in [configs](configs/)
@@ -19,7 +25,7 @@ Different kinds of boards can be generated with config files. The format for the
   "forest_count" : <int>,
   "mine_count" : <int>,
   "mountain_count" : <int>,
-  "wheat_counmt" : <int>,
+  "wheat_count" : <int>,
   "fields_count" : <int>,
   "rules" : [
     <rule object>,
@@ -59,11 +65,11 @@ Rules are used to limit the kinds of board scenarios encountered when randomly g
 |Rule|Description|JSON format|
 |----|-----------|-----------|
 |NoPonds|Eliminates boards with 1 water tile completely surrounded by land.|`{ "name" : "NoPonds", "follow_strictly": <boolean> }`|
-|NoSpecialChitsTouching|Eliminates boards that have two or more hexes with 8 or 6 next to eachother.|`{ "name" : "NoSpecialChitsTouching", "follow_strictly": <boolean> }`|
+|NoSpecialChitsTouching|Eliminates boards that have two or more hexes with 8 or 6 next to each other.|`{ "name" : "NoSpecialChitsTouching", "follow_strictly": <boolean> }`|
 |NoSuperGold|Eliminates boards with 6 or 8 on gold.|`{ "name" : "NoSuperGold", "follow_strictly": <boolean> }`|
 |IslandCount|Specifies the minimum or maximum (or both) of islands in the board, as well as the minimum size of each island. `min`, `max`, `minSize` are all optional.|`{ "name" : "NoPonds", "follow_strictly": <boolean>, "min" : <int>, "max" : <int>, "minSize" : <int> }`|
 
-Increasing the number of rules for a config, or specific properties of the config can increase the time required to generate the board. It's also possible to specify a config file that is impossible to satisfy - for example a config file with only 1 land tile, and `IslandCount` specifying that there needs to be a minimum of two islands. Be careful! 
+Increasing the number of rules for a config, or specific properties of the config can increase the time required to generate the board. It's also possible to specify a config file that is impossible to satisfy - for example a config file with only 1 land tile, and `IslandCount` specifying that there needs to be a minimum of two islands. Be careful!
 
 ## Ports
 Ports are specified by port objects as described below.
@@ -91,7 +97,7 @@ Before you start, you will need to install the following Homebrew packages.
 * [libpng](http://brewformulas.org/libpng)
 * [zlib](http://brewformulas.org/zlib)
 
-Next, clone the repository. 
+Next, clone the repository.
 ```
 $> git clone https://github.com/0aix/RenderersOfCatan.git
 ```
